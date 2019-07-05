@@ -1,2 +1,2 @@
-# spark-performance-test-in-docker
+# Disclaimer:
 This is a work-in-progress project. (WIP)
