@@ -10,8 +10,8 @@ RUN apt-get update && apt-get install -y python-pip && apt-get install -y python
 
 # install spark
 RUN wget http://archive.apache.org/dist/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz && \
-    tar zxvf spark-2.4.0-bin-hadoop2.7.tgz
-RUN rm spark-2.4.0-bin-hadoop2.7.tgz && \
+    tar zxvf spark-2.4.0-bin-hadoop2.7.tgz && \
+    rm spark-2.4.0-bin-hadoop2.7.tgz && \
     mv spark-2.4.0-bin-hadoop2.7 /usr/local/spark && \
     echo "export PATH=$PATH:/usr/local/spark/bin" >> /root/.bashrc && \
     echo "export SPARK_HOME=/usr/local/spark" >> /root/.bashrc
