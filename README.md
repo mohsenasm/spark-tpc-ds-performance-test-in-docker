@@ -5,6 +5,7 @@ This is a work-in-progress project. (WIP)
 # Usage
 
 ## 1. Build Docker Image
+[![](https://images.microbadger.com/badges/image/mohsenasm/spark-tpc-ds-performance-test-in-docker.svg)](https://hub.docker.com/r/mohsenasm/spark-tpc-ds-performance-test-in-docker)
 
 ```
 $ docker build . -t spark-tpc-ds
