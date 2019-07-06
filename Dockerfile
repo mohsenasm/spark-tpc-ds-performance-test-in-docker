@@ -1,3 +1,4 @@
+# for tpc-ds
 FROM alpine/git as git
 WORKDIR /root
 RUN git clone https://github.com/IBM/spark-tpc-ds-performance-test
@@ -15,6 +16,12 @@ RUN wget http://archive.apache.org/dist/spark/spark-2.4.0/spark-2.4.0-bin-hadoop
     mv spark-2.4.0-bin-hadoop2.7 /usr/local/spark && \
     echo "export PATH=$PATH:/usr/local/spark/bin" >> /root/.bashrc && \
     echo "export SPARK_HOME=/usr/local/spark" >> /root/.bashrc
+
+# config history-server
+RUN mkdir /tmp/spark-events && echo $'\
+spark.eventLog.enabled          true \n\
+spark.eventLog.dir              /tmp/spark-events \n\
+spark.history.fs.logDirectory   /tmp/spark-events' > /usr/local/spark/conf/spark-defaults.conf
 
 # copy TPC-DS performance test
 COPY --from=git /root/spark-tpc-ds-performance-test /root/spark-tpc-ds-performance-test

@@ -18,19 +18,11 @@ $ docker run -it -p 18080:18080 -p 4040:4040 spark-tpc-ds bash
 
 ## 3. Run history server
 
-/usr/local/spark/conf/spark-defaults.conf
 ```
-spark.eventLog.enabled          true
-spark.eventLog.dir              /tmp/spark-events
-spark.history.fs.logDirectory   /tmp/spark-events
-```
-
-```
-$ mkdir /tmp/spark-events
 $ /usr/local/spark/sbin/start-history-server.sh
 ```
 
-Now you can see history in browser with http://localhost:18080.
+Now you can see history in browser at http://localhost:18080.
 
 ## 4. Run the Script
 
