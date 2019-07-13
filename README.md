@@ -115,6 +115,9 @@ Press any key to continue
 
 ### Run Option: "(2) - Run a subset of TPC-DS queries"
 
+> You can also create a text file at `work/runlist.txt` with query numbers in each line,
+> then run `bin/run_the_list.sh` to run those queries.
+
 A comma separated list of queries can be specified in this option. The result of each query in the supplied list is generated in `TPCDS_WORK_DIR`, with a default directory location of `work`. The format of the result file is `query<number>.res`.
 
 A summary file named `run_summary.txt` is also generated. It contains information about query number, execution time and number of rows returned.

@@ -20,6 +20,7 @@ RUN wget http://archive.apache.org/dist/spark/spark-2.4.0/spark-2.4.0-bin-hadoop
 # copy TPC-DS performance test
 COPY --from=git /root/spark-tpc-ds-performance-test /root/spark-tpc-ds-performance-test
 COPY tpcdsenv.sh /root/spark-tpc-ds-performance-test/bin/tpcdsenv.sh
+COPY run_the_list.sh /root/spark-tpc-ds-performance-test/bin/run_the_list.sh
 
 # config history-server
 RUN mkdir /tmp/spark-events && echo '\
