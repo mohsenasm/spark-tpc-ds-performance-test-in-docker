@@ -1,7 +1,3 @@
-# Disclaimer
-
-This is a work-in-progress project. (WIP)
-
 # Usage
 
 ## 1. Build Docker Image
